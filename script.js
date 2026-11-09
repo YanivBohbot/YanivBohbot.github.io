@@ -1,3 +1,4 @@
+const deploymentVersion = "20261109";
 document.getElementById("year").textContent = new Date().getFullYear();
 document.querySelector(".profile-card img").src = "assets/yaniv-bohbot-portrait.jpg";
 const incidentPreview = document.querySelector(".incident");
@@ -89,6 +90,13 @@ const bannerStylesheet = document.createElement("link");
 bannerStylesheet.rel = "stylesheet";
 bannerStylesheet.href = "styles.banner.css";
 document.head.append(bannerStylesheet);
+document.querySelectorAll('link[rel="stylesheet"]').forEach((stylesheet) => {
+  const resource = new URL(stylesheet.href, window.location.href);
+  if (resource.origin === window.location.origin) {
+    resource.searchParams.set("v", deploymentVersion);
+    stylesheet.href = resource.href;
+  }
+});
 document.querySelectorAll(".timeline span").forEach((technologyLine) => {
   const technologies = technologyLine.textContent.trim().split(" · ");
   technologyLine.classList.add("technology-tags");
