@@ -1,0 +1,120 @@
+/* Reading-first rhythm for experience, education and technical context. */
+.timeline article,
+.edu-list article {
+  grid-template-columns: minmax(11rem, 15rem) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3vw, 3.25rem);
+  padding-block: 2.35rem;
+}
+
+.timeline article > p,
+.edu-list article > p {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: .92rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  line-height: 1.4;
+  color: #315df4;
+}
+
+.timeline h3,
+.edu-list h3 {
+  font-size: clamp(1.7rem, 2.15vw, 2.1rem);
+  line-height: 1.12;
+  letter-spacing: -.045em;
+  margin-bottom: .9rem;
+}
+
+.timeline div > p,
+.edu-list div > p {
+  max-width: 54rem;
+  font-size: clamp(1.08rem, 1.25vw, 1.18rem);
+  line-height: 1.72;
+  color: #354a51;
+  margin-block: .8rem;
+}
+
+.technology-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  max-width: 58rem;
+  margin-top: 1.1rem;
+}
+
+.technology-tags b,
+.projects li,
+.toolkit span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.35rem;
+  border: 1px solid currentColor;
+  border-radius: .35rem;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: .92rem;
+  font-weight: 650;
+  letter-spacing: .005em;
+  line-height: 1.2;
+}
+
+.technology-tags b {
+  padding: .5rem .7rem;
+  background: #f3f6ff;
+  color: #183e91;
+  box-shadow: 3px 3px 0 #cbd8f6;
+}
+
+.projects li,
+.toolkit span {
+  box-shadow: none;
+}
+
+.projects li {
+  padding: .5rem .72rem;
+  border-color: #6faaa6;
+  background: #103536;
+  color: #dffbf5;
+}
+
+.toolkit span {
+  padding: .55rem .78rem;
+  border-color: #315df4;
+  background: #eef2ff;
+  color: #173274;
+}
+
+@media (max-width: 780px) {
+  .timeline article,
+  .edu-list article {
+    grid-template-columns: 1fr;
+    gap: .85rem;
+    padding-block: 1.8rem;
+  }
+
+  .timeline article > p,
+  .edu-list article > p {
+    font-size: .88rem;
+  }
+
+  .timeline h3,
+  .edu-list h3 {
+    font-size: 1.55rem;
+  }
+
+  .timeline div > p,
+  .edu-list div > p {
+    font-size: 1.04rem;
+    line-height: 1.68;
+  }
+
+  .technology-tags {
+    display: flex;
+    gap: .45rem;
+  }
+
+  .technology-tags b,
+  .projects li,
+  .toolkit span {
+    min-height: 2.2rem;
+    font-size: .88rem;
+  }
+}

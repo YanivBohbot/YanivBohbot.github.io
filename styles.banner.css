@@ -1,0 +1,34 @@
+.portfolio-banner {
+  width: 100%;
+  height: clamp(13rem, 24vw, 23rem);
+  margin: 0;
+  overflow: hidden;
+  background: #071d40;
+  border-bottom: 1px solid #c7ced8;
+}
+
+.portfolio-banner img,
+.portfolio-banner video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+}
+
+@media (max-width: 780px) {
+  .portfolio-banner {
+    height: 13rem;
+  }
+
+  .portfolio-banner img,
+  .portfolio-banner video {
+    object-position: center 34%;
+  }
+}
+
+@media (max-width: 450px) {
+  .portfolio-banner {
+    height: 10rem;
+  }
+}
