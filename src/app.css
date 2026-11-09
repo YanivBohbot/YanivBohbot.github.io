@@ -1,0 +1,7 @@
+.project-grid .compact-media { margin: 1rem 0 1.5rem; }
+.project-grid .compact { position: relative; }
+.project-grid .project-action { position: absolute; top: 1.6rem; right: 1.6rem; }
+.portfolio-banner { margin-top: 0; }
+.portfolio-banner img { object-position: center 28%; }
+.archive[hidden], .feature[hidden], .compact[hidden] { display: none; }
+@media (max-width: 780px) { .project-grid .project-action { position: static; order: 6; margin-top: 1.25rem; } }

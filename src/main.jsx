@@ -1,0 +1,23 @@
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App.jsx';
+import '../styles.css';
+import '../styles.linkedin.css';
+import '../styles.refresh.css';
+import '../styles.typography.css';
+import '../styles.video.css';
+import '../styles.project-media.css';
+import '../styles.ui-scale.css';
+import '../styles.project-actions.css';
+import '../styles.archive.css';
+import '../styles.archive-compact.css';
+import '../styles.archive-actions.css';
+import '../styles.3d.css';
+import '../styles.cube.css';
+import '../styles.contact.css';
+import '../styles.contact-rail.css';
+import '../styles.banner.css';
+import '../styles.readability.css';
+import './app.css';
+
+createRoot(document.getElementById('root')).render(<StrictMode><App /></StrictMode>);

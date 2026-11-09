@@ -1,3 +1,5 @@
 # Local diagnostics and unused source media
 portfolio-check.png
-assets/yaniv-bohbot-genai-banner.mp4
+public/assets/yaniv-bohbot-genai-banner.mp4
+node_modules/
+dist/
