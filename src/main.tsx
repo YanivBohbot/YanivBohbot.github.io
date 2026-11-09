@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App.jsx';
+import App from './app/App';
 import '../styles.css';
 import '../styles.linkedin.css';
 import '../styles.refresh.css';
@@ -20,4 +20,4 @@ import '../styles.banner.css';
 import '../styles.readability.css';
 import './app.css';
 
-createRoot(document.getElementById('root')).render(<StrictMode><App /></StrictMode>);
+createRoot(document.getElementById('root')!).render(<StrictMode><App /></StrictMode>);

@@ -1,29 +1,34 @@
 # Yaniv Bohbot — Portfolio
 
-A static, dependency-free English portfolio. It is ready for GitHub Pages, Cloudflare Pages or Vercel.
+An English React + TypeScript portfolio, deployed through GitHub Pages.
 
-The professional background, education, certifications and skills were derived from the supplied CV. Public project links point to the GitHub profile.
+## Architecture
 
-## Publish
+The project uses Vite and a feature-oriented structure:
 
-Create a `YanivBohbot.github.io` repository, push these files to `main`, then enable **Settings → Pages → Deploy from a branch → main / root**. No server or environment variables are required.
+- `src/app` — application composition.
+- `src/components/layout` — shared header and footer.
+- `src/features/projects` — typed project data, filters and project cards.
+- `src/features/profile` — interactive hero/profile section.
+- `src/features/career` — career path, education and contact sections.
+- `public/assets` — photos, project previews and local demo videos.
 
-## Project media
+## Development
 
-The main portrait is stored locally at `assets/yaniv-bohbot-portrait.jpg`. Keep project media in the repository as well, avoiding expiring social-media asset URLs.
-
-IncidentFlow now uses `assets/projects/incidentflow-promo.mp4` as its embedded project demonstration.
-
-For a screenshot:
-
-```html
-<img src="assets/projects/project-name.jpg" alt="Short description of the project screen" />
+```bash
+npm install
+npm run dev
 ```
 
-For a short demo:
+## Validation and deployment
 
-```html
-<video controls muted playsinline poster="assets/projects/project-name-cover.jpg">
-  <source src="assets/projects/project-name-demo.mp4" type="video/mp4" />
-</video>
+```bash
+npm run typecheck
+npm run build
 ```
+
+Every push to `master` runs the GitHub Pages workflow in `.github/workflows/deploy.yml`. The workflow installs dependencies, builds the Vite application and deploys `dist` to [yanivbohbot.github.io](https://yanivbohbot.github.io/).
+
+## Adding a project
+
+Add a typed project entry to `src/features/projects/data.ts`, place its screenshot or video in `public/assets/projects`, then reuse `ProjectCard` or `FeaturedProject`. The project filter automatically uses the typed `kind` values.
